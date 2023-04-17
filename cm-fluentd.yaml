@@ -37,6 +37,7 @@ data:
     </match>
     <match kubernetes.var.log.containers.**monitoring**.log>
     @type null
+    </match>
      # we send the logs to Elasticsearch
     <match kubernetes.**>
        @type elasticsearch_dynamic
