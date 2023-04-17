@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: fluentd-config
-  namespace: vyaguta-dev
+  namespace: demo
   labels:
     app: fluentd
 data:
@@ -30,6 +30,9 @@ data:
     @type null
     </match>
     <match kubernetes.var.log.containers.**kube-system**.log>
+    @type null
+    </match>
+    <match kubernetes.var.log.containers.**rabindra**.log>
     @type null
     </match>
     <match kubernetes.var.log.containers.**monitoring**.log>
