@@ -15,6 +15,8 @@ data:
     <source>
       @type tail
       path /var/log/containers/*.log
+      # more than one path
+      # path "/var/log/containers/dev*.log,/var/log/containers/qa*.log" 
       pos_file /var/log/containers.log.pos
       tag kubernetes.*
       read_from_head true
